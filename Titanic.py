@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplot.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -77,4 +78,5 @@ accuracy_row = pd.DataFrame({
 submission = pd.concat([submission, accuracy_row], ignore_index=True)
 
 submission.to_csv("submission_with_accuracy.csv", index=False)
+
 print("Submission file with accuracy created!")
